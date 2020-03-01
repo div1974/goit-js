@@ -8,7 +8,7 @@ input = prompt("Пожалуйста, введите те пароль!");
 if (input === null) {
   message = "Отменено пользователем!";
 } else {
-  if (input.includes(ADMIN_PASSWORD)) {
+  if (input === ADMIN_PASSWORD) {
     message = "Добро пожаловать!";
   } else {
     message = "Доступ запрещен, неверный пароль!";

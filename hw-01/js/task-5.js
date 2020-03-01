@@ -1,12 +1,12 @@
 let delivery = prompt("В какую страну вы хотите оформить доставку?");
-if (delivery.includes("")) {
-  delivery = delivery.trim();
-}
 let cost;
 
 if (delivery === null) {
   console.log("Отменено пользователем!");
 } else {
+  if (delivery.includes("")) {
+    delivery = delivery.trim();
+  }
   if (delivery !== "") {
     delivery = delivery.toLowerCase();
     switch (delivery) {
