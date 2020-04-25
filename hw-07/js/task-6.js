@@ -8,7 +8,7 @@ InputEl.addEventListener("blur", InputSmbCheck);
 function InputSmbCheck(e) {
   const InputSmb = e.target.value.length;
 
-  if (InputSmb < CheckedValue) {
+  if (InputSmb != CheckedValue ) {
     return (e.target.style.borderColor = "#f44336");
   } else {
     return (e.target.style.borderColor = "#4caf50");
