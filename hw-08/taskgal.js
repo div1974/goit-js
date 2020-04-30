@@ -10,10 +10,8 @@ const closeModalBtn = document.querySelector(
 // console.log(closeModalBtn);
 const ModalOverlay = document.querySelector(".lightbox__overlay");
 
-const galItems = images.forEach((el) => {
-  const galEl = buildImgItem(el);
-  gal.insertAdjacentHTML("beforeend", galEl);
-});
+const galItems = images.map((el) => buildImgItem(el));
+gal.insertAdjacentHTML("beforeend", galItems.join(''));
 
 function buildImgItem(item) {
   return `
